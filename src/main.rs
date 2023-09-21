@@ -177,11 +177,13 @@ fn main() {
     plot_fft("plot2.png", &magnitude, 0.0 , 10.0, 100.0, 500);
     let file_path2: &str = "src/test.txt";
     let data2 = load_from_file(file_path2);
+    
     plot("plot3.png", &data2, -15.0 , 15.0, 100.0);
     let answer = approximate_signal(&data2, 0.0, 2.0, 400).unwrap();
     plot("plot4.png", &answer, -15.0 , 15.0, 200.0);
     let magnitude2 = fft(&answer);
-    plot_fft("plot5.png", &magnitude2, 0.0 , 10.0, 200.0, 200 );
+    println!("{}", answer.len());
+    plot_fft("plot5.png", &fft(&answer), 0.0 , 10.0, 200.0, 400 );
     for (n,x) in magnitude2[0..magnitude2.len()/2].iter().enumerate(){
         if *x > 1.5 && *x < 5.0
         {
