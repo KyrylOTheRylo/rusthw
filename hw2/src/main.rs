@@ -139,7 +139,7 @@ fn main() {
     for peak_index in peaks {
         let frequency = calculate_frequency(100.0, 500 , peak_index);
         let peak_value = frequency_spectrum[peak_index];
-        println!("Peak at frequency: {} Hz with magnitude: {}", frequency, peak_value);
+        println!("Peak at frequency: {}", frequency);
     }
 
 
