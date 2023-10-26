@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 plotters = "0.3.5"
 rustfft = "6.1.0"
+nalgebra = "0.31.3"
