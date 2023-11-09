@@ -206,12 +206,12 @@ fn main() {
 
 
     println!("{:?}", magnitude);
-    let a1 = -2.0;
+    let a1 = -2.00000;
     let a2 = 1.0;
-    let b0 = 4.0*0.001* 0.001;
+    let b0 = 4.0*0.0001* 0.0001;
     let mut my_filter = Filter::new(a1, a2, b0);
     let filtered_data: Vec<f64> = data.iter().map(|&x| my_filter.filter(x)).collect();
     println!("{:?}", filtered_data);
-    plot("plot5.png", &filtered_data, 0.0, 10.0,100.0);
+    plot("plot5.png", &filtered_data, 0.0, 10.0/100.0,100.0);
 
 }
